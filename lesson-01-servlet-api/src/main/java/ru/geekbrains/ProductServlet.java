@@ -43,7 +43,6 @@ public class ProductServlet extends HttpServlet {
             wr.println("</table>");
         } else if (req.getPathInfo() == null || req.getPathInfo().equals("/")) {
             wr.println("<table>");
-
             wr.println("<tr>");
             wr.println("<th>Id</th>");
             wr.println("<th>Name</th>");
