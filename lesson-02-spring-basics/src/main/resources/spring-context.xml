@@ -5,11 +5,20 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
   http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
-     <context:component-scan base-package="ru.geekbrains"/>
+    <!-- <context:component-scan base-package="ru.geekbrains"/>-->
 
        <!-- <bean id="productRepository" class="ru.geekbrains.persist.ProductRepositoryImpl"/>
 
         <bean id="productService" class="ru.geekbrains.ProductService">
             <constructor-arg ref="productRepository"/>
         </bean>-->
+     <bean class="ru.geekbrains.persist.ProductRepositoryImpl" id="productRepository"/>
+     <bean class="ru.geekbrains.ProductService" id="productService">
+          <constructor-arg ref="productRepository"/>
+     </bean>
+
+     <bean scope = "prototype" class="ru.geekbrains.persist.CartService" id="cartService">
+          <constructor-arg ref="productRepository"/>
+     </bean>
+
 </beans>
