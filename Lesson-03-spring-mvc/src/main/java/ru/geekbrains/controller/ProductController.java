@@ -32,11 +32,19 @@ public class ProductController {
         return "product_form";
     }
 
-    @GetMapping("/new")
-    public String create(Model model) {
-        // TODO model.addAttribute("product", ?????);
-        return "product_form";
+    @PostMapping("/search")
+    public String search(Long id, Model model) {
+        model.addAttribute("products", productRepository.findById(id)
+                .orElseThrow(() -> new NotFoundException("Product not found")));
+        return "product";
     }
+
+  @GetMapping("/new")
+  public String create(Model model) {
+
+        model.addAttribute("product", new Product());
+      return "product_form";
+  }
 
     @PostMapping
     public String save(Product product) {

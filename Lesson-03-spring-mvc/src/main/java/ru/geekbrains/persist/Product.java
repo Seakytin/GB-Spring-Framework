@@ -12,16 +12,16 @@ public class Product {
     private String description;
 
     // TODO
-    private BigDecimal price;
 
+    private int price;
     public Product() {
     }
 
-    public Product(Long id, String name) {
+    public Product(Long id, String name, String description, int price) {
         this.id = id;
         this.name = name;
-       // this.price = price;
-       // this.description = description;
+        this.price = price;
+        this.description = description;
     }
 
     public Long getId() {
@@ -40,7 +40,20 @@ public class Product {
         this.name = name;
     }
 
-  //  public Long getPrice() { return price; }
-//
-  //  public void setPrice() {this.price = price;}
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
 }
