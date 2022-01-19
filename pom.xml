@@ -10,6 +10,9 @@
     <modules>
         <module>lesson-01-servlet-api</module>
         <module>lesson-02-spring-basics</module>
+        <module>Lesson-03-spring-mvc</module>
+        <module>lesson-04-spring-boot</module>
+        <module>lesson-05-hibernate</module>
     </modules>
     <packaging>pom</packaging>
 
