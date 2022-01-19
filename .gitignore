@@ -1,3 +1,4 @@
 /.idea
 **/target/
+**/lesson-01-servlet-api/
 *.iml/
